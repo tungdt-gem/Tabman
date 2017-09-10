@@ -219,6 +219,27 @@ internal extension TabmanViewController {
         // "zPosition should be within (-FLT_MAX, FLT_MAX) range" error.
         bar.layer.zPosition = CGFloat(Float.greatestFiniteMagnitude)
         
+        if let style = self.bar.appearance?.style {
+            if style.enableShadow {
+                bar.layer.masksToBounds = false
+                if let shadowColor = style.shadowColor {
+                    bar.layer.shadowColor = shadowColor.cgColor
+                }
+                
+                if let opacity = style.shadowOpacity {
+                    bar.layer.shadowOpacity = opacity
+                }
+                
+                if let radius = style.shadowRadius {
+                    bar.layer.shadowRadius = radius
+                }
+                
+                if let offset = style.shadowOffset {
+                    bar.layer.shadowOffset = offset
+                }
+            }
+        }
+        
         bar.removeFromSuperview()
         self.view.addSubview(bar)
         

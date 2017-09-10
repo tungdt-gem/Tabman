@@ -81,8 +81,20 @@ public extension TabmanBar {
             public var showEdgeFade: Bool?
             /// Color of the separator at the bottom of the bar.
             public var bottomSeparatorColor: UIColor?
+            
             /// The image rendering mode for items that have an image
             public var imageRenderingMode: UIImageRenderingMode?
+
+            /// Shadow support
+            public var enableShadow: Bool = false
+            /// Shadow color
+            public var shadowColor: UIColor?
+            /// Shadow opacity
+            public var shadowOpacity: Float?
+            /// Shadow radius
+            public var shadowRadius: CGFloat?
+            /// Shadow offset
+            public var shadowOffset: CGSize?
         }
         
         public struct Text {
