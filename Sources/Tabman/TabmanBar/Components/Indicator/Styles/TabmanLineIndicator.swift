@@ -18,8 +18,8 @@ public extension TabmanIndicator {
     public enum LineWeight: CGFloat {
         case thin = 1.0
         case normal = 2.0
+        case littleThick = 3.0
         case thick = 4.0
-        case other(value: CGFloat)
     }
 }
 
